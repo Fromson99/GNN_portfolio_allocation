@@ -1,4 +1,4 @@
-# MLM(Masked Language Model)을 활용한 금융 감성 점수 계산 (IN PROGRESS)
+# GNN(Masked Language Model)을 활용한 테마 분산투자 (Done)
 ---
 
 ## 목차 (Table of Contents)
@@ -36,17 +36,12 @@
 |----------------------------------------|--------------------------------------------------|------------------------------------------------------|---------------------------------------|
 | **NH_CONTEST_NW_FC_STK_IEM_IFO.csv**   | 8월 27일 기준 (정적 스냅샷)                      | - 해외 종목 기초 정보<br>- 주소, 업종, 시총 등 제공    | `TCK_IEM_CD`, `CEO_NM`, `MKT_PR_TOT_AMT` |
 | **NH_CONTEST_STK_DT_QUT.csv**          | 2024-05-28 ~ 2024-08-27 (일별 시세)               | - 해외 종목의 일별 시세 정보<br>- 시가/고가/저가/종가  | `BSE_DT`, `IEM_ONG_PR`, `IEM_END_PR`  |
-| **NH_CONTEST_NHDATA_STK_DD_IFO.csv**   | 2024-05-28 ~ 2024-08-27 (일별 보유 데이터)        | - 보유 계좌 및 보유 수량 관련 지표<br>- 투자자 손익 및 분포 |
-| `TOT_HLD_QTY`, `TCO_AVG_PFT_RT`, `IFW_ACT_CNT` |
-| **NH_CONTEST_NHDATA_IFW_OFW_IFO.csv**  | 2024-05-28 ~ 2024-08-27 (유입/유출 상위 TOP5)      | - 해외 종목 유입/유출 데이터<br>- 최대 5위까지 순위 제공 |
-| `IFW_OFW_DIT_CD`, `IFW_OFW_AMT_WHT_RT` |
-| **NH_CONTEST_NHDATA_CUS_TP_IFO.csv**   | 2024-05-28 ~ 2024-08-27                           | - 고객 분류(중분류/대분류)별 보유 비율<br>- 고객 구성 계좌 정보 |
-| `CUS_CGR_LLF_CD`, `CUS_CGR_ACT_CNT_RT` |
-| **NH_CONTEST_DATA_ETF_HOLDINGS.csv**   | 2024-08-27 기준 (ETF 구성 종목 정보)             | - ETF 내 편입된 종목<br>- 구성 종목의 가치 및 보유 주수 |
-| `ETF_TCK_CD`, `TCK_IEM_CD`, `MKT_VLU`  |
+| **NH_CONTEST_NHDATA_STK_DD_IFO.csv**   | 2024-05-28 ~ 2024-08-27 (일별 보유 데이터)        | - 보유 계좌 및 보유 수량 관련 지표<br>- 투자자 손익 및 분포 | `TOT_HLD_QTY`, `TCO_AVG_PFT_RT`, `IFW_ACT_CNT` |
+| **NH_CONTEST_NHDATA_IFW_OFW_IFO.csv**  | 2024-05-28 ~ 2024-08-27 (유입/유출 상위 TOP5)      | - 해외 종목 유입/유출 데이터<br>- 최대 5위까지 순위 제공 | `IFW_OFW_DIT_CD`, `IFW_OFW_AMT_WHT_RT` |
+| **NH_CONTEST_NHDATA_CUS_TP_IFO.csv**   | 2024-05-28 ~ 2024-08-27                           | - 고객 분류(중분류/대분류)별 보유 비율<br>- 고객 구성 계좌 정보 | `CUS_CGR_LLF_CD`, `CUS_CGR_ACT_CNT_RT` |
+| **NH_CONTEST_DATA_ETF_HOLDINGS.csv**   | 2024-08-27 기준 (ETF 구성 종목 정보)             | - ETF 내 편입된 종목<br>- 구성 종목의 가치 및 보유 주수 | `ETF_TCK_CD`, `TCK_IEM_CD`, `MKT_VLU`  |
 | **NH_CONTEST_DATA_HISTORICAL_DIVIDEND.csv** | 2022-08-27 ~ 2024-08-27 (ETF 배당 이력)       | - ETF 배당 정보<br>- 배당락일, 지급일, 배당금 등       | `ETF_TCK_CD`, `EDIV_DT`, `DDN_AMT`    |
-| **NH_CONTEST_ETF_SOR_IFO.csv**         | 2024-05-28 ~ 2024-08-27                           | - ETF 수익률과 점수 관련 지표<br>- Sharpe지수, 상관관계 등 |
-| `MM1_TOT_PFT_RT`, `ETF_SOR`, `Z_SOR_RNK` |
+| **NH_CONTEST_ETF_SOR_IFO.csv**         | 2024-05-28 ~ 2024-08-27                           | - ETF 수익률과 점수 관련 지표<br>- Sharpe지수, 상관관계 등 | `MM1_TOT_PFT_RT`, `ETF_SOR`, `Z_SOR_RNK` |
 
 - 위 표는 각 파일의 핵심 정보를 요약한 것이며, 상세 데이터는 저작권으로 인해 제공되지 않습니다.  
 - 기간은 데이터가 수집된 구간이며, 분석 시점이나 범위에 따라 일부 변동이 있을 수 있습니다.
