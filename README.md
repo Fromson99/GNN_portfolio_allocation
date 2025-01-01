@@ -52,7 +52,7 @@
 
 ```mermaid
 flowchart LR
-    A([데이터 제공<br>및 전처리]) --> B([네트워크 구성 <br> (노드 특성+Spillover 엣지)])
+    A([데이터 제공<br>및 전처리]) --> B([네트워크 구성 <bar> 노드 특성+Spillover 엣지])
     B --> C([T-GNN<br>학습])
     C --> D([임베딩 -><br>KNN 클러스터링])
     D --> E([클러스터링<br>결과 바탕<br>새로운 네트워크])
